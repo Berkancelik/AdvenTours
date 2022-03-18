@@ -33,7 +33,7 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public List<About> TGetList(About t)
+        public List<About> TGetList()
         {
             return _aboutDal.getList();
         }
