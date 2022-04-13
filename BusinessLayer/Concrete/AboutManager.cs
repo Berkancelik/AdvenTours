@@ -16,7 +16,7 @@ namespace BusinessLayer.Concrete
 
         public AboutManager(IAboutDal aboutDal)
         {
-            _aboutDal = _aboutDal;
+            _aboutDal = aboutDal;
         }
         public void TAdd(About t)
         {
