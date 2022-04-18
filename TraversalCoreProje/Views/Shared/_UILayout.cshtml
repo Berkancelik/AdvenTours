@@ -2,22 +2,27 @@
 @{
     Layout = null;
 }
+
 <!doctype html>
-<html lang="zxx">
+    <html lang="zxx">
 
-@await Html.PartialAsync("/Views/LayoutPartial/_HeaderPartial.cshtml")
+    @await Html.PartialAsync("/Views/LayoutPartial/_HeaderPartial.cshtml")
 
-<body>
-    @await Html.PartialAsync("/Views/LayoutPartial/_NavbarPartial.cshtml")
+    <body>
+        @await Html.PartialAsync("/Views/LayoutPartial/_NavbarPartial.cshtml")
 
-    @RenderBody()
+        @RenderBody()
 
-    @await Html.PartialAsync("/Views/LayoutPartial/_FooterPartial.cshtml")
+        @await Html.PartialAsync("/Views/LayoutPartial/_FooterPartial.cshtml")
 
-    @await Html.PartialAsync("/Views/LayoutPartial/_ScriptPartial.cshtml")
+        @await Html.PartialAsync("/Views/LayoutPartial/_ScriptPartial.cshtml")
 
 
-</body>
-</html>
+    </body>
+    </html>
+
+
+
+
 
 
