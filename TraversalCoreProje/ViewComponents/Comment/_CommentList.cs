@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFreamework;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +10,11 @@ namespace TraversalCoreProje.ViewComponents.Comment
 {
     public class _CommentList : ViewComponent
     {
-        public IViewComponentResult Invoke()
+        CommentManager commentManager = new CommentManager(new EfCommentDal());
+        public IViewComponentResult Invoke(int id)
         {
-            return View();
+            var values = commentManager.TGetDestinaitonById(id);
+            return View(values);
         }
     }
 }
