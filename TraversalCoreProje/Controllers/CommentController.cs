@@ -9,20 +9,23 @@ namespace TraversalCoreProje.Controllers
     public class CommentController : Controller
     {
         CommentManager commentManager = new CommentManager(new EfCommentDal());
-
         [HttpGet]
         public PartialViewResult AddComment()
         {
             return PartialView();
         }
 
+
         [HttpPost]
-        public PartialViewResult AddComment(Comment p)
+        public IActionResult AddComment(Comment p)
         {
             p.CommentDate = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             p.CommentStatus = true;
+            p.DestinationId = 3;
             commentManager.TAdd(p);
-            return PartialView();
+            return RedirectToAction("Index", "Destination");
         }
+
+
     }
 }
