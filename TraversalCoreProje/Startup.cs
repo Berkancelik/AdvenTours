@@ -25,7 +25,7 @@ namespace TraversalCoreProje
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<Context>();
-            services.AddIdentity<AppUser, AppRole>
+            //services.AddIdentity<AppUser, AppRole>
             services.AddControllersWithViews();
         }
 
