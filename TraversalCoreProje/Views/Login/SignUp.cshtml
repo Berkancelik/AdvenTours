@@ -1,4 +1,5 @@
-﻿@model TraversalCoreProje.Models.UserRegisterViewModel
+﻿
+@model TraversalCoreProje.Models.UserRegisterViewModel
 @{
     Layout = null;
 }
@@ -21,7 +22,6 @@ Author URL: http://w3layouts.com
         addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
         }, false);
-
         function hideURLbar() {
             window.scrollTo(0, 1);
         }
@@ -56,42 +56,40 @@ Author URL: http://w3layouts.com
                         <h4>Bize Katılın</h4>
                         <p>Hemen ücretsiz hesap oluşturun.</p>
                     </div>
-                    <form action="#" method="post" class="signin-form">
-                        <div class="form-input">
-                            <label>Adınız</label>
-                            <input type="text" name="" required asp-for="Name" />
-                            <span asp-validation-for="Name" class="text-danger"></span>
-                        </div>
-                        <div class="form-input">
-                            <label>Soyadınız</label>
-                            <input type="text" name="" asp-for="Surname" required />
-                            <span asp-validation-for="Surname" class="text-danger"></span>
+        <form asp-action="SignUp"  class="signin-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+              <div class="form-input">
+                <label asp-for="Name" class="control-label">Adınız</label>
+                <input asp-for="Name" class="form-input"  />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+              <div class="form-input">
+                <label asp-for="Surname" class="control-label">Soyadınız</label>
+                <input asp-for="Surname" class="form-input" />
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
+            <div class="form-input">
+                <label asp-for="UserName" class="control-label">Kullanıcı Adınız</label>
+                <input asp-for="UserName" class="form-input" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-input">
+                <label asp-for="Mail" class="control-label">Mail Adresiniz</label>
+                <input asp-for="Mail" type="email"  class="form-input" />
+                <span asp-validation-for="Mail"  class="text-danger"></span>
+            </div>
+         
+            <div class="form-input">
+                <label asp-for="Password" class="control-label">Parola</label>
+                <input asp-for="Password" type="password" class="form-input" />
+                <span asp-validation-for="Password" type="password"  class="text-danger"></span>
+            </div>
 
-                        </div>
-
-                        <div class="form-input">
-                            <label>Mail</label>
-                            <input type="email" name="" asp-for="Mail" required />
-                            <span asp-validation-for="Mail" class="text-danger"></span>
-
-                        </div>
-                        <div class="form-input">
-                            <label>Şifreniz</label>
-                            <input type="password" name="" asp-for="Password" required />
-                            <span asp-validation-for="Password" class="text-danger"></span>
-
-                        </div>
-
-                        <div class="form-input">
-                            <label>Şifre Tekrar</label>
-                            <input type="password" name="" asp-for="ConfirmPassword" required />
-                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-
-                        </div>
-
-                        <div class="text-danger" asp-validation-summary="ModelOnly">
-
-                        </div>
+              <div class="form-input">
+                <label asp-for="ConfirmPassword" class="control-label">Parola Tekrar</label>
+                <input asp-for="ConfirmPassword" type="password" class="form-input" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                 </div>
 
                         <label class="container">
                             Şartları Okudum Kabul Ediyorum
