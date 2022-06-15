@@ -39,7 +39,6 @@ namespace TraversalCoreProje
                 .AddEntityFrameworkStores<Context>();
             services
                 .AddControllersWithViews();
-
             services.AddMvc(config =>
             {
                 var policy = new AuthorizationPolicyBuilder()
@@ -47,8 +46,6 @@ namespace TraversalCoreProje
                 .Build();
                 config.Filters.Add(new AuthorizeFilter(policy));
             });
-
-            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
