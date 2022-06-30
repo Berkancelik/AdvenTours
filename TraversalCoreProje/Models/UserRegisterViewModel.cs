@@ -20,7 +20,7 @@ namespace TraversalCoreProje.Models
         public string Password { get; set; }
 
         [Required(ErrorMessage = "Lütfen şifrenizi giriniz")]
-        [Compare("Password",ErrorMessage = "Şifreler uyumlu değil")]
+        [Compare("Password", ErrorMessage = "Şifreler uyumlu değil")]
         public string ConfirmPassword { get; set; }
     }
 }
