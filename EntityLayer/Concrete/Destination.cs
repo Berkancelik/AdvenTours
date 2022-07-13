@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EntityLayer.Concrete
 {
@@ -7,7 +8,6 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int DestinationID { get; set; }
-        public object DestinationId { get; set; }
         public string City { get; set; }
         public string DayNight { get; set; }
         public double Price { get; set; }
@@ -19,6 +19,7 @@ namespace EntityLayer.Concrete
         public string Details2 { get; set; }
         public string Image2 { get; set; }
         public List<Comment> Comments { get; set; }
+        public List<Reservation> Reservations { get; set; }
 
 
     }

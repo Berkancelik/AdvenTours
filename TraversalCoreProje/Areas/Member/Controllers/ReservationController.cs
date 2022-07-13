@@ -45,7 +45,7 @@ namespace TraversalCoreProje.Areas.Member.Controllers
                                            select new SelectListItem
                                            {
                                                Text = x.City,
-                                               Value = x.DestinationId.ToString()
+                                               Value = x.DestinationID.ToString()
                                            }).ToList();
             ViewBag.v = values;
             return View();
