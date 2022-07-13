@@ -25,18 +25,22 @@ namespace TraversalCoreProje.Areas.Member.Controllers
         public async Task<IActionResult> MyCurrentReservation()
         {
             var values = await _userManager.FindByNameAsync(User.Identity.Name);
-            var valueList= reservationManager.GetListApprovaReservation(values.Id);
+            var valueList= reservationManager.GetListWithReservaitonByAccepted(values.Id);
             return View(valueList);
         }
 
-        public IActionResult MyOldReservation()
+        public async Task<IActionResult> MyOldReservation()
         {
-            return View();
+            var values = await _userManager.FindByNameAsync(User.Identity.Name);
+            var valueList = reservationManager.GetListWithReservaitonByPrevious(values.Id);
+            return View(valueList);
         }
 
-        public IActionResult MyApprovalReservation()
+        public async Task<IActionResult> MyApprovalReservation()
         {
-            return View();
+            var values = await _userManager.FindByNameAsync(User.Identity.Name);
+            var valueList = reservationManager.GetListWithReservaitonByWaitApproval(values.Id);
+            return View(valueList);
         }
         [HttpGet]
         public IActionResult NewReservation()
