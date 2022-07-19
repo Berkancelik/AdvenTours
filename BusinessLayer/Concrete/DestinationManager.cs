@@ -33,7 +33,7 @@ namespace BusinessLayer.Concrete
 
         public List<Destination> TGetList()
         {
-            return _destinationDal.getList();
+            return _destinationDal.GetList();
         }
 
         public void TUpdate(Destination t)

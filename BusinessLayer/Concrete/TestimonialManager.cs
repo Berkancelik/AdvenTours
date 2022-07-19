@@ -33,7 +33,7 @@ namespace BusinessLayer.Concrete
 
         public List<Testimonial> TGetList()
         {
-            return _testimonialDal.getList();
+            return _testimonialDal.GetList();
 
         }
 

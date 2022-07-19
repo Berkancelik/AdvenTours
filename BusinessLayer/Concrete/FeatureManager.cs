@@ -32,7 +32,7 @@ namespace BusinessLayer.Concrete
 
         public List<Feature> TGetList()
         {
-            return _featureDal.getList();
+            return _featureDal.GetList();
         }
 
         public void TUpdate(Feature t)

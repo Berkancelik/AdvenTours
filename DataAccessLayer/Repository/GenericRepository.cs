@@ -21,7 +21,7 @@ namespace DataAccessLayer.Repository
             return c.Set<T>().Find(id);
         }
 
-        public List<T> getList()
+        public List<T> GetList()
         {
             using var c = new Context();
             return c.Set<T>().ToList();

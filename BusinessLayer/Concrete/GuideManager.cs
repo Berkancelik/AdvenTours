@@ -3,39 +3,42 @@ using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class SubAboutManager : ISubAboutService
+    public class GuideManager : IGuideService
     {
-        ISubAboutDal _subAboutDal;
+        IGuideDal _guideDal;
 
-        public SubAboutManager(ISubAboutDal subAboutDal)
+        public GuideManager(IGuideDal guideDal)
         {
-            _subAboutDal = subAboutDal;
+            _guideDal = guideDal;
         }
 
-        public void TAdd(SubAbout t)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void TDelete(SubAbout t)
+        public void TAdd(Guide t)
         {
             throw new NotImplementedException();
         }
 
-        public SubAbout TGetByID(int id)
+        public void TDelete(Guide t)
         {
             throw new NotImplementedException();
         }
 
-        public List<SubAbout> TGetList()
+        public Guide TGetByID(int id)
         {
-            return _subAboutDal.GetList();
+            throw new NotImplementedException();
         }
 
-        public void TUpdate(SubAbout t)
+        public List<Guide> TGetList()
+        {
+            return _guideDal.GetList();
+        }
+
+        public void TUpdate(Guide t)
         {
             throw new NotImplementedException();
         }
