@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFreamework;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +10,6 @@ namespace TraversalCoreProje.Controllers
 {
     public class DefaultController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+       
     }
 }
