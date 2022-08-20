@@ -27,5 +27,11 @@ namespace TraversalCoreProje.Controllers
         {
             return PartialView();
         }
+
+
+        public PartialViewResult PartialScript()
+        {
+            return PartialView();
+        }
     }
 }
