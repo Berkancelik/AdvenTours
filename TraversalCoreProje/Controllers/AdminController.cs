@@ -13,5 +13,9 @@ namespace TraversalCoreProje.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult PartialSidebar()
+        {
+            return PartialView();
+        }
     }
 }

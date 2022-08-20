@@ -23,7 +23,7 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(Destination t)
         {
-            throw new NotImplementedException();
+            _destinationDal.Delete(t);
         }
 
         public Destination TGetByID(int id)
