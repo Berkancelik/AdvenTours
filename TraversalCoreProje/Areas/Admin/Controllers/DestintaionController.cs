@@ -8,7 +8,7 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
 {
     [AllowAnonymous]
     [Area("Admin")]
-    public class DestintaionController : Controller
+    public class DestinationController : Controller
     {
         DestinationManager destinationManager = new DestinationManager(new EfDestinationDal());
         public IActionResult Index()
