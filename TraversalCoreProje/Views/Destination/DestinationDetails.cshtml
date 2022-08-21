@@ -9,18 +9,13 @@
 <html lang="zxx">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Traversal Travel Category Bootstrap Responsive Template | Blog Single </title>
-    <!-- google fonts -->
     <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
           rel="stylesheet">
-    <!-- google fonts -->
-    <!-- Template CSS -->
     <link rel="stylesheet" href="~/Traversal-Liberty/assets/css/style-liberty.css">
-    <!-- Template CSS -->
 </head>
 
 <body>
@@ -64,7 +59,6 @@
         </div>
     </div>
     <section class="blog-post-main w3l-homeblock1">
-        <!--/blog-post-->
         <div class="blog-content-inf pb-5">
             <div class="container pb-lg-4">
                 <div class="single-post-image">
@@ -121,7 +115,6 @@
                         </div>
                     </div>
 
-                    <!--//author-card-->
                     <div class="author-card mt-5">
                         <div class="row align-items-center">
                             <div class="col-sm-3 col-6">
@@ -176,14 +169,12 @@
                             </div>
                         </div>
                     </div>
-                    <!--//author-card-->
                     @await Component.InvokeAsync("_CommentList",new{id=ViewBag.i})
                     @await Html.PartialAsync("~/Views/Comment/AddComment.cshtml")
 
                 </div>
             </div>
         </div>
-        <!--//blog-post-->
     </section>
 
 </body>
