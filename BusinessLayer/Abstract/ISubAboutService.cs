@@ -3,7 +3,7 @@
 
 namespace BusinessLayer.Abstract
 {
-    interface ISubAboutService : IGenericService<SubAbout>
+    public interface ISubAboutService : IGenericService<SubAbout>
     {
     }
 }

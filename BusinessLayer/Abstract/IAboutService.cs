@@ -3,7 +3,8 @@
 
 namespace BusinessLayer.Abstract
 {
-    interface IAboutService:IGenericService<About>
+    public interface IAboutService : IGenericService<About>
     {
+
     }
 }
