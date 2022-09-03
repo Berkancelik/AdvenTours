@@ -44,5 +44,10 @@ namespace BusinessLayer.Concrete
         {
             throw new NotImplementedException();
         }
+
+        public List<Comment> GetListCommentWithDestination()
+        {
+            return _commentDal.GetListCommentWithDestination();
+        }
     }
 }
