@@ -42,6 +42,8 @@ namespace TraversalCoreProje
 
             services.AddScoped<ICommentService, CommentManager>();
             services.AddScoped<ICommentDal, EfCommentDal>();
+            services.AddScoped<IDestinationService, DestinationManager>();
+            services.AddScoped<IDestinationDal, EfDestinationDal>();
             services.AddMvc(config =>
             {
                 var policy = new AuthorizationPolicyBuilder()
