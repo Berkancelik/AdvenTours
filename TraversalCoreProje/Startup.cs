@@ -1,4 +1,8 @@
+using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
+using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFreamework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -35,6 +39,9 @@ namespace TraversalCoreProje
                 .AddEntityFrameworkStores<Context>();
             services
                 .AddControllersWithViews();
+
+            services.AddScoped<ICommentService, CommentManager>();
+            services.AddScoped<ICommentDal, EfCommentDal>();
             services.AddMvc(config =>
             {
                 var policy = new AuthorizationPolicyBuilder()
