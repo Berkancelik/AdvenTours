@@ -10,6 +10,11 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
     {
         private readonly ICommentService _commentService;
 
+        public CommentController(ICommentService commentService)
+        {
+            _commentService = commentService;
+        }
+
         public IActionResult Index()
         {
             var values = _commentService.GetListCommentWithDestination();
