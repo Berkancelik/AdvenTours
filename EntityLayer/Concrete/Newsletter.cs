@@ -4,6 +4,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EntityLayer.Concrete
 {
+    /// <summary>
+    /// NewsLetter Class
+    /// </summary>
     public class Newsletter
     {
         [Key]

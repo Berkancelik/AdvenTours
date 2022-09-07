@@ -3,6 +3,9 @@
 
 namespace EntityLayer.Concrete
 {
+    /// <summary>
+    /// Feature 2 Class
+    /// </summary>
     public class Feature2
     {
         [Key]

@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EntityLayer.Concrete
 {
+    /// <summary>
+    /// Comment Class
+    /// </summary>
     public class Comment
     {
         [Key]

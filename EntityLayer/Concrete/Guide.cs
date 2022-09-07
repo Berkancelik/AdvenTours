@@ -2,6 +2,9 @@
 
 namespace EntityLayer.Concrete
 {
+    /// <summary>
+    /// Guide Class
+    /// </summary>
     public class Guide
     {
         [Key]
