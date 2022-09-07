@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace EntityLayer.Concrete
 {
+    /// <summary>
+    /// AppUser Class
+    /// </summary>
     public class AppUser : IdentityUser<int>
     {
         public string ImageUrl { get; set; }

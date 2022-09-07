@@ -4,6 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EntityLayer.Concrete
 {
+    /// <summary>
+    /// Destination Class
+    /// </summary>
     public class Destination
     {
         [Key]
