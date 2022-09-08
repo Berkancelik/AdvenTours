@@ -1,5 +1,6 @@
 using BusinessLayer.Abstract;
 using BusinessLayer.Concrete;
+using BusinessLayer.Container;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFreamework;
@@ -37,6 +38,9 @@ namespace TraversalCoreProje
                 .AddEntityFrameworkStores<Context>()
                 .AddErrorDescriber<CustomIdentityValidator>()
                 .AddEntityFrameworkStores<Context>();
+
+
+            services.ContainerDependencies();
             services
                 .AddControllersWithViews();
 
