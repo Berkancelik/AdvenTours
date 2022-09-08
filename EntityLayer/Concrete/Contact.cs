@@ -3,6 +3,9 @@
 
 namespace EntityLayer.Concrete
 {
+    /// <summary>
+    /// Contact Class
+    /// </summary>
     public class Contact
     {
         [Key]

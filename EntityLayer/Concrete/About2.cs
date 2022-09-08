@@ -3,6 +3,9 @@
 
 namespace EntityLayer.Concrete
 {
+    /// <summary>
+    /// About 2 Class
+    /// </summary>
     public class About2
     {
         [Key]
