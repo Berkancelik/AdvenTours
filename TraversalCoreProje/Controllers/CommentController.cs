@@ -8,6 +8,9 @@ namespace TraversalCoreProje.Controllers
 {
     public class CommentController : Controller
     {
+        /// <summary>
+        /// Method to return ad commnet values
+        /// </summary>
         CommentManager commentManager = new CommentManager(new EfCommentDal());
         [HttpGet]
         public PartialViewResult AddComment()
@@ -15,6 +18,11 @@ namespace TraversalCoreProje.Controllers
             return PartialView();
         }
 
+        /// <summary>
+        /// Method to return ad commnet values
+        /// </summary>
+        /// <param name="p">Comment Parameter</param>
+        /// <returns></returns>
 
         [HttpPost]
         public IActionResult AddComment(Comment p)
