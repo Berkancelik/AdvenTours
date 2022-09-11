@@ -66,7 +66,7 @@ namespace TraversalCoreProje
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseStatusCodePagesWithReExecute("/ErrorPAge/Error404", "?code={0}");
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
