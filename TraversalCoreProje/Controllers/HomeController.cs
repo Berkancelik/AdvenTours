@@ -21,12 +21,14 @@ namespace TraversalCoreProje.Controllers
         public IActionResult Index()
         {
             _logger.LogInformation("Index sayfası Çağrıldı");
+            _logger.LogError("Log Error çağrıldı");
             return View();
         }
 
         public IActionResult Privacy()
         {
-            _logger.LogInformation("Privacy sayfası Çağrıldı");
+            DateTime d = Convert.ToDateTime(DateTime.Now.ToLongDateString());
+            _logger.LogInformation(d + "Privacy sayfası Çağrıldı");
 
             return View();
         }
