@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using TraversalCoreProje.Models;
 
 namespace TraversalCoreProje.Controllers
@@ -20,11 +17,22 @@ namespace TraversalCoreProje.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("Index sayfası Çağrıldı");
+            _logger.LogError("Log Error çağrıldı");
             return View();
         }
 
         public IActionResult Privacy()
         {
+            DateTime d = Convert.ToDateTime(DateTime.Now.ToLongDateString());
+            _logger.LogInformation(d + "Privacy sayfası Çağrıldı");
+
+            return View();
+        }
+
+        public IActionResult Test()
+        {
+            _logger.LogInformation("Test sayfası çağrıldı");
             return View();
         }
 
