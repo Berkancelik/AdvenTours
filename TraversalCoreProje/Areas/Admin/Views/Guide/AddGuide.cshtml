@@ -1,13 +1,31 @@
-﻿
+﻿@model EntityLayer.Concrete.Guide
 @{
     ViewData["Title"] = "AddGuide";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+<h1>Rehber Oluşturma Sayfası</h1>
+<form method="post">
+    <div class="form-group">
+        @Html.Label("İsim")
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Instagram URL")
+        <input type="text" asp-for="InstagramUrl" class="form-control" />
+    </div>
+    <br />
+  <div class="form-group">
+        @Html.Label("Twitter URL")
+        <input type="text" asp-for="TwitterUrl" class="form-control" />
+    </div>
 
-@{
-    ViewData["Title"] = "AddGuide";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-}
-
-<h1>AddGuide</h1>
+    <br />
+    <div class="form-group">
+        @Html.Label("Açıklama")
+        <textarea cols="30" rows="5" class="form-control" asp-for="Description"></textarea>
+    </div>
+    <br />
+    <button class="btn btn-outline-primary">Oluştur</button>
+</form>
