@@ -7,6 +7,10 @@ namespace TraversalCoreProje.Areas.Member.Controllers
     [AllowAnonymous]
     public class CommentController : Controller
     {
+        /// <summary>
+        /// Imdex View Method
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             return View();
