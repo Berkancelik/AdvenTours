@@ -20,7 +20,7 @@ namespace BusinessLayer.Concrete
 
         public void TAdd(Guide t)
         {
-            throw new NotImplementedException();
+            _guideDal.Insert(t);
         }
 
         public void TDelete(Guide t)
