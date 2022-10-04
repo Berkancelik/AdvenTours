@@ -18,6 +18,8 @@ namespace BusinessLayer.Container
         {
             services.AddScoped<IExcelService,ExcelManager>();
 
+            services.AddScoped<IPdfService,PdfManager>();
+
             services.AddScoped<ICommentService, CommentManager>();
             services.AddScoped<ICommentDal, EfCommentDal>();
 
