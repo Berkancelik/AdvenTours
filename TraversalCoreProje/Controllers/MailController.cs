@@ -5,6 +5,7 @@ using TraversalCoreProje.Models;
 
 namespace TraversalCoreProje.Controllers
 {
+    [Area("Admin")]
     public class MailController : Controller
     {
         [HttpGet]
@@ -18,13 +19,16 @@ namespace TraversalCoreProje.Controllers
         public IActionResult Index(MailRequest mailRequest)
         {
             MimeMessage mimeMessage = new MimeMessage();
-            MailboxAddress mailboxAdressFrom = new MailboxAddress(mailRequest.Name, mailRequest.SenderMail); 
-
+            MailboxAddress mailboxAdressFrom = new MailboxAddress("Admin", "traversalcore2@gmail.com"); 
             mimeMessage.From.Add(mailboxAdressFrom);
 
             MailboxAddress mailboxAddressTo = new MailboxAddress("User", mailRequest.ReceiverMail);
-
             mimeMessage.To.Add(mailboxAddressTo);
+
+            var bodyBuilder = new BodyBuilder();
+            bodyBuilder.TextBody = mailRequest.Body;
+            mimeMessage.Body = bodyBuilder.ToMessageBody();
+
 
             mimeMessage.Subject = mailRequest.Subject;
 
