@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
@@ -19,23 +18,35 @@
 </div>
 
 <script>
-$("#btngetlist").click(function() {
-    $.ajax({
-        contentType: "application/json",
-        dataType: "json",
-        type: "get",
-        url: "/Admin/City/CityList",
-        success: function(func) {
-            let w = jQuery.parseJSON(func);
-            console.log(w);
-            let tablehtml = "<table class=table table-bordered> <tr><th> Şehir ID</th><th> Şehir Adı</th><th> Şehir Ülke Adı</th></tr>";
+    $("#btngetlist").click(function () {
+        $.ajax({
+            contentType: "application/json",
+            dataType: "json",
+            type: "get",
+            url: "/Admin/City/CityList/",
+            success: function (func) {
+                let w = jQuery.parseJSON(func);
+                console.log(w);
+                let tablehtml = "<table class=table table-bordered> <tr><th> Şehir Adı</th><th> Gün-Gece </th><th> Fiyatı </th></tr>";
 
-            $.each(w, (index, value) => {
-                tablehtml += `<tr><td>${value.Id}<td/> <tr><td>${value.Name}<td/><tr><td>${value.Country}<td/>z/tr>`
-            });
-            tablehtml += "</table>";
-            $("#citylist").html(tablehtml);
+                $.each(w, (index, value) => {
+                    tablehtml += `<tr><td>${value.City}<td/> <tr><td>${value.DayNight}<td/><tr><td>${value.Price}₺<td/>z/tr>`
+                });
+                tablehtml += "</table>";
+                $("#citylist").html(tablehtml);
+            }
+        });
+    })
+    $("#btnaddcity").click(function () {
+
+        let cityvalues = {
+            City: $("#txtcity").val(),
+            DayNight: $("#daynight").val(),
+            Price: $("#tctprice").val(),
+            Capacity: $("#txtcapacity").val(),
+
         }
-    });
-})
+
+    })
+
 </script>
