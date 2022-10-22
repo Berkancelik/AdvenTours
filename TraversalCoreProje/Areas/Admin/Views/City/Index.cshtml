@@ -17,6 +17,19 @@
     Buraya Şehir Listesi Gelecek
 </div>
 
+
+<div>
+    <input type = "text" id="txtcity" placeholder="Şehir adını giriniz" class="form-control" />
+    <br/>
+    <input type = "text" id="txtdaynight" placeholder="Gün Gece Sayısı" class="form-control" />
+        <br/>
+
+    <input type = "text" id="txtprice" placeholder="Fiyat" class="form-control" />
+        <br/>
+
+    <input type = "text" id="txtcapacity" placeholder="Konaklayacak Kişi Sayısı" class="form-control" />
+</div>
+
 <script>
     $("#btngetlist").click(function () {
         $.ajax({
@@ -41,12 +54,20 @@
 
         let cityvalues = {
             City: $("#txtcity").val(),
-            DayNight: $("#daynight").val(),
-            Price: $("#tctprice").val(),
+            DayNight: $("#txtdaynight").val(),
+            Price: $("#txtprice").val(),
             Capacity: $("#txtcapacity").val(),
 
-        }
-
-    })
+        };
+        $.ajax({
+            type:"post",
+            url:"/Admin/City/AddCityDestination/",
+            data:cityvalues,
+            success:function(func){
+                let result = jQuery.parseJSON(func);
+                alert("Şehir - Rota Başarılı bir şekilde eklendi");
+            }
+        });
+    });
 
 </script>

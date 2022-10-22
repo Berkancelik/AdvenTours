@@ -32,6 +32,7 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
 
         public IActionResult AddCityDestination(Destination destination)
         {
+            destination.Status = true;
             _destinationService.TAdd(destination);
             var values = JsonConvert.SerializeObject(destination);  
             return Json(values);
