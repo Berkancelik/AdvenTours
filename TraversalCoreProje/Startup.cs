@@ -1,9 +1,5 @@
-using BusinessLayer.Abstract;
-using BusinessLayer.Concrete;
 using BusinessLayer.Container;
-using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
-using DataAccessLayer.EntityFreamework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
