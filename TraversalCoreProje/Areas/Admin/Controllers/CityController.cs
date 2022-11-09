@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Concrete;
+using DocumentFormat.OpenXml.ExtendedProperties;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -43,6 +44,20 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
             var values = _destinationService.TGetByID(DestinationID);
             var jsonvalues = JsonConvert.SerializeObject(values);
             return Json(jsonvalues);
+        }
+
+        public IActionResult DeleteCity(int id) {
+            var values = _destinationService.TGetByID(id);
+            _destinationService.TDelete(values);
+            return NoContent();
+        }
+
+        public IActionResult UpdateCity(Destination destination)
+        {
+            var values = _destinationService.TGetByID(destination.DestinationID);
+            _destinationService.TUpdate(values);
+            var v = JsonConvert.SerializeObject(destination);
+            return Json(v);
         }
 
 
