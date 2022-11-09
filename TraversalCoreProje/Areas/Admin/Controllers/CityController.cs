@@ -38,9 +38,9 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
             return Json(values);
         }
 
-        public IActionResult GetById(int id)
+        public IActionResult GetById(int DestinationID)
         {
-            var values = _destinationService.TGetByID(id);
+            var values = _destinationService.TGetByID(DestinationID);
             var jsonvalues = JsonConvert.SerializeObject(values);
             return Json(jsonvalues);
         }
