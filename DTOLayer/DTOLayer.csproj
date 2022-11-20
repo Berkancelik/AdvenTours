@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\AppUserDTOs\" />
     <Folder Include="DTOs\ContactDTOs\" />
   </ItemGroup>
 
