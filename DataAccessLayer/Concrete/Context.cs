@@ -19,6 +19,7 @@ namespace DataAccessLayer.Concrete
         public DbSet<Feature> Features { get; set; }
         public DbSet<Feature2> Feature2s { get; set; }
         public DbSet<Guide> Guides { get; set; }
+        public DbSet<ContactUS> ContactUses { get; set; }
         public DbSet<Newsletter> Newsletters { get; set; }
         public DbSet<SubAbout> SubAbouts { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
