@@ -1,6 +1,8 @@
+using AutoMapper;
 using BusinessLayer.Container;
 using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -14,7 +16,7 @@ using TraversalCoreProje.Models;
 
 namespace TraversalCoreProje
 {
-    public class Startup
+    public class Startup:Profile
     {
         public Startup(IConfiguration configuration)
         {
@@ -26,6 +28,7 @@ namespace TraversalCoreProje
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
 
             services.AddLogging(x =>
             {
@@ -44,9 +47,14 @@ namespace TraversalCoreProje
                 .AddEntityFrameworkStores<Context>();
 
 
-            services.ContainerDependencies();
+            services.
+                ContainerDependencies();
+
+            services.AddAutoMapper(typeof(Startup));
+
+
             services
-                .AddControllersWithViews();
+                .AddControllersWithViews().AddFluentValidation();
 
             services.AddMvc(config =>
             {
