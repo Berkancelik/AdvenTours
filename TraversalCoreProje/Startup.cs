@@ -50,7 +50,7 @@ namespace TraversalCoreProje
             services.
                 ContainerDependencies();
 
-            services.AddAutoMapper(typeof(Startup));
+            //services.AddAutoMapper(typeof(Startup));
 
 
             services
