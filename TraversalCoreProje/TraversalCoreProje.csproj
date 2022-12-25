@@ -12,6 +12,7 @@
 	  <None Remove="Areas\Admin\Data\**" />
 	</ItemGroup>
 
+	
 	<ItemGroup>
 	  <None Include="wwwroot\simple-404-template-master\assets\images\404.svg" />
 	  <None Include="wwwroot\simple-404-template-master\LICENSE" />
@@ -365,7 +366,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="AutoMapper" Version="11.0.0" />
+		<PackageReference Include="AutoMapper" Version="8.0.0" />
 		<PackageReference Include="ClosedXML" Version="0.96.0" />
 		<PackageReference Include="EntityFramework" Version="6.4.4" />
 		<PackageReference Include="EPPlus" Version="5.8.14" />
@@ -394,9 +395,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Areas\Admin\NewFolder\" />
 	  <Folder Include="Areas\Member\Data\" />
-	  <Folder Include="Mapping\" />
 	  <Folder Include="wwwroot\Logs\" />
 	  <Folder Include="wwwroot\PdfReports\" />
 	  <Folder Include="wwwroot\userimages\" />

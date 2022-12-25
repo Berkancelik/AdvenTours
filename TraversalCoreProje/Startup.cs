@@ -1,7 +1,9 @@
-using AutoMapper;
 using BusinessLayer.Container;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.Concrete;
+using DTOLayer.DTOs.AnnoucmenetDTOs;
 using EntityLayer.Concrete;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -16,7 +18,7 @@ using TraversalCoreProje.Models;
 
 namespace TraversalCoreProje
 {
-    public class Startup:Profile
+    public class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -29,6 +31,8 @@ namespace TraversalCoreProje
         public void ConfigureServices(IServiceCollection services)
         {
 
+            //services.AddAutoMapper(typeof(Startup));
+            services.AddTransient<IValidator<AnnoucementAddDTOs>, AnnoucementValidator>();
 
             services.AddLogging(x =>
             {
@@ -50,7 +54,6 @@ namespace TraversalCoreProje
             services.
                 ContainerDependencies();
 
-            //services.AddAutoMapper(typeof(Startup));
 
 
             services
