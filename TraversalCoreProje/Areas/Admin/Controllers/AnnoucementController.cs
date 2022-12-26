@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Abstract;
+﻿using AutoMapper;
+using BusinessLayer.Abstract;
 using DocumentFormat.OpenXml.Office2010.ExcelAc;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
@@ -13,24 +14,17 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
     public class AnnoucementController : Controller
     {
         private readonly IAnnoucementService _annoucementService;
+        private readonly IMapper _mapper;
 
-        public AnnoucementController(IAnnoucementService annoucementService)
+        public AnnoucementController(IAnnoucementService annoucementService, IMapper mapper)
         {
             _annoucementService = annoucementService;
+            _mapper = mapper;
         }
 
         public IActionResult Index()
         {
-            List<Annoucement> annoucements = _annoucementService.TGetList();
-            List<AnnoucementListViewModel> model = new List<AnnoucementListViewModel>();
-            foreach (var item in annoucements)
-            {
-                AnnoucementListViewModel annoucementListViewModel = new AnnoucementListViewModel();
-                annoucementListViewModel.Id = item.Id;
-                annoucementListViewModel.Title = item.Title;
-                annoucementListViewModel.Content = item.Content;
-                model.Add(annoucementListViewModel);
-            }
+           var values = _mapper.Map<List>
             return View(model);
         }
 
