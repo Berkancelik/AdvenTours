@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTOLayer.DTOs.AnnoucmenetDTOs
 {
-    internal class AnnoucmeentListDTOs
+    public class AnnoucmeentListDTOs
     {
     }
 }

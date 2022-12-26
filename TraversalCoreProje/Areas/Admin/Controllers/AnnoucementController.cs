@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BusinessLayer.Abstract;
 using DocumentFormat.OpenXml.Office2010.ExcelAc;
+using DTOLayer.DTOs.AnnoucmenetDTOs;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -24,8 +25,8 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-           var values = _mapper.Map<List>
-            return View(model);
+            var values = _mapper.Map<List<AnnoucmeentListDTOs>>(_annoucementService.TGetList());
+            return View(values);
         }
 
 
