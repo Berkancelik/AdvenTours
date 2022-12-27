@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using TaversalCoreApi.DAL.Context;
@@ -6,8 +7,8 @@ using TaversalCoreApi.DAL.Entites;
 
 namespace TaversalCoreApi.Controllers
 {
+    [EnableCors]
     [Route("api/[controller]")]
-    [ApiController]
     public class VisiterController : ControllerBase
     {
 

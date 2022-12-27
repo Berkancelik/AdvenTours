@@ -33,7 +33,7 @@ namespace TraversalCoreProje
 
             //services.AddAutoMapper(typeof(Startup));
             services.AddTransient<IValidator<AnnoucementAddDTOs>, AnnoucementValidator>();
-
+            services.AddHttpClient();
             services.AddLogging(x =>
             {
                 x.ClearProviders();
