@@ -1,6 +1,4 @@
-﻿
-
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -51,7 +49,6 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
-
             }
             return View();
         }
@@ -78,7 +75,6 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<VisitorViewModel>(jsonData);
                 return View(values);
-
             }
             return View();
         }
@@ -94,7 +90,6 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
-
             }
             return View();
         }
