@@ -2,7 +2,7 @@
 
 namespace BusinessLayer.Concrete
 {
-    public class PdfManager: IPdfService
+    public class PdfManager : IPdfService
     {
     }
 }

@@ -1,13 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Net.Http;
-using System;
-using DocumentFormat.OpenXml.Office2021.DocumentTasks;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using DocumentFormat.OpenXml.Office2010.ExcelAc;
-using TraversalCoreProje.Areas.Admin.Models;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
+using TraversalCoreProje.Areas.Admin.Models;
 
 namespace TraversalCoreProje.Areas.Admin.Controllers
 {
@@ -17,7 +15,7 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
-            List <BookingExchangeViewModel2> bookingExchangeViewModel = new List<BookingExchangeViewModel2>();
+            List<BookingExchangeViewModel2> bookingExchangeViewModel = new List<BookingExchangeViewModel2>();
             var client = new HttpClient();
             var request = new HttpRequestMessage
             {
@@ -33,7 +31,7 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
             {
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
-                var values =  JsonConvert.DeserializeObject<BookingExchangeViewModel2>(body);
+                var values = JsonConvert.DeserializeObject<BookingExchangeViewModel2>(body);
                 return View(values.base_currency);
 
             }

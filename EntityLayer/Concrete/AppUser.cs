@@ -27,6 +27,6 @@ namespace EntityLayer.Concrete
         /// <summary>
         /// Reservations Field
         /// </summary>
-        public List<Reservation> Reservations {get;set;}
-}
+        public List<Reservation> Reservations { get; set; }
+    }
 }

@@ -5,14 +5,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessLayer.Concrete
 {
-    public class Context: IdentityDbContext<AppUser,AppRole,int>
-    {        
+    public class Context : IdentityDbContext<AppUser, AppRole, int>
+    {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("server=DESKTOP-IITT7DV;database=TraversalCoreDB;integrated security=true");
         }
 
-        public DbSet<About> Abouts  { get; set; }
+        public DbSet<About> Abouts { get; set; }
         public DbSet<About2> About2s { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Destination> Destinations { get; set; }

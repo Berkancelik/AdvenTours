@@ -2,7 +2,7 @@
 
 namespace TraversalCoreProje.ViewComponents.MemberDashboard
 {
-    public class _PlatformSettings:ViewComponent
+    public class _PlatformSettings : ViewComponent
     {
         public IViewComponentResult Invoke()
         {
@@ -11,4 +11,3 @@ namespace TraversalCoreProje.ViewComponents.MemberDashboard
     }
 }
 
-   

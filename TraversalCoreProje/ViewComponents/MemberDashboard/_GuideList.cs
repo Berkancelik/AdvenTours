@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TraversalCoreProje.ViewComponents.MemberDashboard
 {
-    public class _GuideList:ViewComponent 
+    public class _GuideList : ViewComponent
     {
         GuideManager guideManager = new GuideManager(new EfGuideDal());
         public IViewComponentResult Invoke(int id)

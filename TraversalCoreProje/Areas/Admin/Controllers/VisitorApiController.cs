@@ -27,25 +27,25 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values   = JsonConvert.DeserializeObject<List<VisitorViewModel>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<VisitorViewModel>>(jsonData);
                 return View(values);
             }
             return View();
         }
 
         [HttpGet]
-        public IActionResult AddVisitor  ()
+        public IActionResult AddVisitor()
         {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddVisitor( VisitorViewModel visitorViewModel)
+        public async Task<IActionResult> AddVisitor(VisitorViewModel visitorViewModel)
         {
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(visitorViewModel);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("https://localhost:44317/api/Visiter",content);
+            var responseMessage = await client.PostAsync("https://localhost:44317/api/Visiter", content);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");

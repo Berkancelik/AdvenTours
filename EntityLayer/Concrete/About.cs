@@ -14,7 +14,7 @@ namespace EntityLayer.Concrete
         /// AboutID Field
         /// </summary>
 
-        [Key]            
+        [Key]
         public int AboutID { get; set; }
         /// <summary>
         /// Title Field

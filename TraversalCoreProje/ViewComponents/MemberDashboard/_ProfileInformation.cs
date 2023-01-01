@@ -1,12 +1,11 @@
-﻿using BusinessLayer.Concrete;
-using EntityLayer.Concrete;
+﻿using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace TraversalCoreProje.ViewComponents.MemberDashboard
 {
-    public class _ProfileInformation:ViewComponent
+    public class _ProfileInformation : ViewComponent
     {
         private readonly UserManager<AppUser> _userManager;
 

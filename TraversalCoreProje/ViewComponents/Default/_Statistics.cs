@@ -1,13 +1,10 @@
 ﻿using DataAccessLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace TraversalCoreProje.ViewComponents.Default
 {
-    public class _Statistics:ViewComponent
+    public class _Statistics : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

@@ -2,12 +2,9 @@
 using DataAccessLayer.Concrete;
 using DataAccessLayer.Repository;
 using EntityLayer.Concrete;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccessLayer.EntityFreamework
 {
@@ -34,7 +31,7 @@ namespace DataAccessLayer.EntityFreamework
 
             using (var context = new Context())
             {
-                return context.Reservations.Include(x => x.Destination).Where(x=> x.Status == "Onay Bekliyor && " && x.AppUserId == id).ToList();
+                return context.Reservations.Include(x => x.Destination).Where(x => x.Status == "Onay Bekliyor && " && x.AppUserId == id).ToList();
             }
         }
     }

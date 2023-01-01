@@ -1,6 +1,4 @@
 ﻿using BusinessLayer.Abstract;
-using BusinessLayer.Concrete;
-using DataAccessLayer.EntityFreamework;
 using Microsoft.AspNetCore.Mvc;
 
 namespace TraversalCoreProje.Areas.Admin.Controllers
@@ -18,7 +16,7 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
         public IActionResult Index()
         {
             var values = _commentService.GetListCommentWithDestination();
-            
+
             return View(values);
         }
     }

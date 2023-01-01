@@ -5,7 +5,7 @@ using EntityLayer.Concrete;
 
 namespace TraversalCoreProje.Models.AutoMapperProfile
 {
-    public class MapProfile:Profile
+    public class MapProfile : Profile
     {
         public MapProfile()
         {

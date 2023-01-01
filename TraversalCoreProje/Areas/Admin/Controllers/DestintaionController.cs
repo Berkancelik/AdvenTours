@@ -1,6 +1,4 @@
-﻿using BusinessLayer.Concrete;
-using DataAccessLayer.Concrete;
-using DataAccessLayer.EntityFreamework;
+﻿using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -59,7 +57,7 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
- 
+
 
     }
 }

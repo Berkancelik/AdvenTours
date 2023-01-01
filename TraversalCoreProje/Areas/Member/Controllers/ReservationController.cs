@@ -25,7 +25,7 @@ namespace TraversalCoreProje.Areas.Member.Controllers
         public async Task<IActionResult> MyCurrentReservation()
         {
             var values = await _userManager.FindByNameAsync(User.Identity.Name);
-            var valueList= reservationManager.GetListWithReservaitonByAccepted(values.Id);
+            var valueList = reservationManager.GetListWithReservaitonByAccepted(values.Id);
             return View(valueList);
         }
 
@@ -62,8 +62,8 @@ namespace TraversalCoreProje.Areas.Member.Controllers
             p.Status = "Onay Bekliyor";
             reservationManager.TAdd(p);
             return RedirectToAction(nameof(MyCurrentReservation));
-            
-         
+
+
         }
     }
 }

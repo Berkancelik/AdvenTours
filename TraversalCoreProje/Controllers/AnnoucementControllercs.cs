@@ -1,6 +1,4 @@
 ﻿using BusinessLayer.Abstract;
-using DataAccessLayer.Abstract;
-using DocumentFormat.OpenXml.Office2010.ExcelAc;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -41,7 +39,7 @@ namespace TraversalCoreProje.Controllers
         [HttpGet]
         public IActionResult AddAnnoucement()
         {
-            return View();  
+            return View();
         }
 
         [HttpPost]

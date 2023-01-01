@@ -4,6 +4,6 @@ namespace DataAccessLayer.Abstract
 {
     interface INewsletterDal : IGenericDal<Newsletter>
     {
-    
+
     }
 }

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace BusinessLayer.Concrete
 {
-    public class DestinationManager:IDestinationService
+    public class DestinationManager : IDestinationService
     {
         IDestinationDal _destinationDal;
 

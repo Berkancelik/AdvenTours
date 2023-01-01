@@ -4,7 +4,7 @@ using FluentValidation;
 
 namespace BusinessLayer.ValidationRules
 {
-    public class AboutValidator: AbstractValidator<About>
+    public class AboutValidator : AbstractValidator<About>
     {
         public AboutValidator()
         {

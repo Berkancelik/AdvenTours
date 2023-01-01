@@ -1,13 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Net.Http;
-using System;
-using DocumentFormat.OpenXml.Office2021.DocumentTasks;
-using System.Threading.Tasks;
-using DocumentFormat.OpenXml.Office2010.ExcelAc;
-using TraversalCoreProje.Areas.Admin.Models;
-using System.Collections.Generic;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
+using TraversalCoreProje.Areas.Admin.Models;
 
 namespace TraversalCoreProje.Areas.Admin.Controllers
 {

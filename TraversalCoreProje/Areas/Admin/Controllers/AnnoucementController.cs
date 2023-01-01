@@ -1,12 +1,9 @@
 ﻿using AutoMapper;
 using BusinessLayer.Abstract;
-using DocumentFormat.OpenXml.Office2010.ExcelAc;
 using DTOLayer.DTOs.AnnoucmenetDTOs;
-using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using TraversalCoreProje.Areas.Admin.Models;
 
 namespace TraversalCoreProje.Areas.Admin.Controllers
 {

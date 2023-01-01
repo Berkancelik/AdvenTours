@@ -3,7 +3,6 @@ using ClosedXML.Excel;
 using DataAccessLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using OfficeOpenXml;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,7 +23,7 @@ namespace TraversalCoreProje.Controllers
 
         public IActionResult Index()
         {
-           return View();   
+            return View();
         }
 
         public List<DestinationModel> DestinationList()
@@ -44,9 +43,10 @@ namespace TraversalCoreProje.Controllers
             return destinationModels;
         }
 
-        public IActionResult StaticExcelReport() {
+        public IActionResult StaticExcelReport()
+        {
 
-            return File(_excelService.ExcelList(DestinationList()), "application/vnd.openxmlformats-ofiicedocument.spreadsheetml.sheet","YeniExcel.xlsx");
+            return File(_excelService.ExcelList(DestinationList()), "application/vnd.openxmlformats-ofiicedocument.spreadsheetml.sheet", "YeniExcel.xlsx");
 
 
         }

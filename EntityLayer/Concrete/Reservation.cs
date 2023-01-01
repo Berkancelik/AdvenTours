@@ -22,7 +22,7 @@ namespace EntityLayer.Concrete
         /// <summary>
         /// Person Count
         /// </summary>
-        public string  PersonCount { get; set; }
+        public string PersonCount { get; set; }
         /// <summary>
         /// Reservation Date
         /// </summary>
@@ -34,7 +34,7 @@ namespace EntityLayer.Concrete
         /// <summary>
         /// Status
         /// </summary>
-        public string  Status { get; set; }
+        public string Status { get; set; }
         /// <summary>
         /// Destination
         /// </summary>

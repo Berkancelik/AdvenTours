@@ -11,9 +11,9 @@ namespace BusinessLayer.Container
     {
         public static void ContainerDependencies(this IServiceCollection services)
         {
-            services.AddScoped<IExcelService,ExcelManager>();
+            services.AddScoped<IExcelService, ExcelManager>();
 
-            services.AddScoped<IPdfService,PdfManager>();
+            services.AddScoped<IPdfService, PdfManager>();
 
             services.AddScoped<ICommentService, CommentManager>();
             services.AddScoped<ICommentDal, EfCommentDal>();

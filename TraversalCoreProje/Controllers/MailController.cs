@@ -19,7 +19,7 @@ namespace TraversalCoreProje.Controllers
         public IActionResult Index(MailRequest mailRequest)
         {
             MimeMessage mimeMessage = new MimeMessage();
-            MailboxAddress mailboxAdressFrom = new MailboxAddress("Admin", "traversalcore2@gmail.com"); 
+            MailboxAddress mailboxAdressFrom = new MailboxAddress("Admin", "traversalcore2@gmail.com");
             mimeMessage.From.Add(mailboxAdressFrom);
 
             MailboxAddress mailboxAddressTo = new MailboxAddress("User", mailRequest.ReceiverMail);
@@ -37,8 +37,8 @@ namespace TraversalCoreProje.Controllers
             client.Authenticate(mailRequest.SenderMail, "passsword");
             client.Send(mimeMessage);
             client.Disconnect(true);
-            
-               
+
+
 
             return View();
         }

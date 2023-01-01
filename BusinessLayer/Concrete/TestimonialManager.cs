@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace BusinessLayer.Concrete
 {
-    public class TestimonialManager:ITestimonialService
+    public class TestimonialManager : ITestimonialService
     {
         ITestimonialDal _testimonialDal;
 

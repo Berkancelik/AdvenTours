@@ -12,7 +12,7 @@ namespace DataAccessLayer.EntityFreamework
     {
         public List<Comment> GetListCommentWithDestination()
         {
-            using(var c=new Context())
+            using (var c = new Context())
             {
                 return c.Comments.Include(x => x.Destination).ToList();
             }

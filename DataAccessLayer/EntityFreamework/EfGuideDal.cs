@@ -14,7 +14,7 @@ namespace DataAccessLayer.EntityFreamework
         {
             var values = context.Guides.Find(id);
             values.Status = false;
-            context.Update(values); 
+            context.Update(values);
             context.SaveChanges();
         }
 

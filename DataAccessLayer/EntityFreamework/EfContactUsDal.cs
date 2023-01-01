@@ -5,8 +5,6 @@ using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccessLayer.EntityFreamework
 {
@@ -19,7 +17,7 @@ namespace DataAccessLayer.EntityFreamework
 
         public List<ContactUS> GetListContactUsByFalse()
         {
-            using(var context = new Context())
+            using (var context = new Context())
             {
                 var values = context.ContactUses.Where(x => x.MessageStatus == false).ToList();
                 return values;

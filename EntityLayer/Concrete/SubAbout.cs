@@ -9,8 +9,8 @@ namespace EntityLayer.Concrete
     /// </summary>
     public class SubAbout
     {/// <summary>
-    /// Sub About Id
-    /// </summary>
+     /// Sub About Id
+     /// </summary>
         [Key]
         public int SubAboutId { get; set; }
         /// <summary>

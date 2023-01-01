@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using TaversalCoreApi.DAL.Context;
@@ -25,12 +24,12 @@ namespace TaversalCoreApi.Controllers
         [HttpPost]
         public IActionResult VisitorAdd(VisitorContext visitor)
         {
-            using(var context = new VisitorContext())
+            using (var context = new VisitorContext())
             {
                 context.Add(visitor);
                 context.SaveChanges();
                 return Ok();
-            }   
+            }
         }
 
         [HttpGet("{id}")]
@@ -39,7 +38,7 @@ namespace TaversalCoreApi.Controllers
             using (var context = new VisitorContext())
             {
                 var values = context.Visitors.Find(id);
-                if (values ==null)
+                if (values == null)
                 {
                     return NotFound();
 
@@ -73,10 +72,10 @@ namespace TaversalCoreApi.Controllers
         [HttpPut]
         public IActionResult UpdateVisitor(Visitor visitor)
         {
-            using(var context = new VisitorContext())
+            using (var context = new VisitorContext())
             {
                 var values = context.Find<Visitor>(visitor.Id);
-                if(values == null)
+                if (values == null)
                 {
                     return NotFound();
                 }

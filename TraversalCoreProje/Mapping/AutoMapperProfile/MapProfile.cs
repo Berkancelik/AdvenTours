@@ -1,11 +1,10 @@
 ﻿using DTOLayer.DTOs.AnnoucmenetDTOs;
 using DTOLayer.DTOs.AppUserDTOs;
-using DTOLayer.DTOs.CityDTOs;
 using EntityLayer.Concrete;
 
 namespace TraversalCoreProje.Mapping.AutoMapperProfile
 {
-    public class MapProfile: AutoMapper.Profile
+    public class MapProfile : AutoMapper.Profile
     {
         public MapProfile()
         {
@@ -15,7 +14,7 @@ namespace TraversalCoreProje.Mapping.AutoMapperProfile
             CreateMap<AppUserRegisterDTOs, AppUser>();
             CreateMap<AppUser, AppUserRegisterDTOs>();
 
-            CreateMap <AppUserLoginDTOs, AppUser>();
+            CreateMap<AppUserLoginDTOs, AppUser>();
             CreateMap<AppUser, AppUserLoginDTOs>();
 
         }

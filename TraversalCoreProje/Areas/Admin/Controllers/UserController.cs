@@ -44,7 +44,8 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
         /// <returns></returns>
         [HttpGet]
         public IActionResult EditUser(int id)
-        {var values = _appUserService.TGetByID(id);
+        {
+            var values = _appUserService.TGetByID(id);
             return View(values);
 
         }
@@ -57,7 +58,7 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult EditUser(AppUser appUser)
         {
-           _appUserService.TUpdate(appUser);
+            _appUserService.TUpdate(appUser);
             return RedirectToAction("Index");
         }
 

@@ -79,7 +79,7 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
         public IActionResult ChangeToTrue(int id)
         {
             _guideService.TChangeToTrueByGuide(id);
-            return RedirectToAction("Index", "Guide", new {area="Admin"});
+            return RedirectToAction("Index", "Guide", new { area = "Admin" });
         }
 
         [Route("ChangeToFalse/{id}")]
