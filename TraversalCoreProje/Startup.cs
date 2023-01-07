@@ -33,6 +33,10 @@ namespace TraversalCoreProje
         {
 
             services.AddScoped<GetAllDestinationQueryHandler>();
+            services.AddScoped<GetDestinationByIdQueryHandler>();
+            services.AddScoped<CreateDestinationCommandHandler>();
+            services.AddScoped<RemoveDestinationCommandHandler>();
+            services.AddScoped<UpdateDestinationCommandHandler>();
 
             //services.AddAutoMapper(typeof(Startup));
             services.AddTransient<IValidator<AnnoucementAddDTOs>, AnnoucementValidator>();
