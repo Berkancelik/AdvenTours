@@ -11,5 +11,6 @@
 
         public string City { get; set; }
         public string Daynight { get; set; }
+        
     }
 }

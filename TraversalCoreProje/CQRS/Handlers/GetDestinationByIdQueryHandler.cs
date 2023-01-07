@@ -1,5 +1,5 @@
 ﻿using DataAccessLayer.Concrete;
-using TraversalCoreProje.CQRS.Queries;
+using TraversalCoreProje.CQRS.Queries.DestinationQueries;
 using TraversalCoreProje.CQRS.Results.DestinationResults;
 
 namespace TraversalCoreProje.CQRS.Handlers
@@ -20,6 +20,7 @@ namespace TraversalCoreProje.CQRS.Handlers
                 Id = values.DestinationID,
                 City = values.City,
                 DayNight = values.DayNight,
+                Price = values.Price
             };
         }
     }
