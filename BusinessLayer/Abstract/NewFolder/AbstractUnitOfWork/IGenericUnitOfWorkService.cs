@@ -12,5 +12,7 @@ namespace BusinessLayer.Abstract.NewFolder.AbstractUnitOfWork
         void TInsert(T t);
         void TUpdate(T t);
         void TMultiUpdate(List<Account> t);
+        T GetById(int id);
+
     }
 }

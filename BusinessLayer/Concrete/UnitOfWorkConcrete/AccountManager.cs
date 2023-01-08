@@ -21,6 +21,11 @@ namespace BusinessLayer.Concrete.UnitOfWorkConcrete
             _unitOfWorkDal = unitOfWorkDal;
         }
 
+        public Account GetById(int id)
+        {
+            return _accountDal.GetById(id);
+        }
+
         public void TInsert(Account t)
         {
             _accountDal.Insert(t);
