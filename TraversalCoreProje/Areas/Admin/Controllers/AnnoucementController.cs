@@ -8,7 +8,6 @@ using System.Collections.Generic;
 namespace TraversalCoreProje.Areas.Admin.Controllers
 {
     [AllowAnonymous]
-    [Area("Admin")]
     public class AnnoucementController : Controller
     {
         private readonly IAnnoucementService _annoucementService;

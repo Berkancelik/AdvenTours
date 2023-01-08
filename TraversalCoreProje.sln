@@ -13,7 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTOLayer", "DTOLayer\DTOLayer.csproj", "{2F7DC0A0-58A0-4C7E-BAA1-CCEAB0898125}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaversalCoreApi", "TaversalCoreApi\TaversalCoreApi.csproj", "{043FA33A-7FCC-4260-BF1E-CBE634E674B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaversalCoreApi", "TaversalCoreApi\TaversalCoreApi.csproj", "{043FA33A-7FCC-4260-BF1E-CBE634E674B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C7246587-250D-4CED-BF5F-6C36AED14AF3}"
+	ProjectSection(SolutionItems) = preProject
+		ProjectDetails.txt = ProjectDetails.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
