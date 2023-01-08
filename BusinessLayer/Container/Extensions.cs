@@ -2,10 +2,13 @@
 using BusinessLayer.Abstract.NewFolder.AbstractUnitOfWork;
 using BusinessLayer.Concrete;
 using BusinessLayer.Concrete.UnitOfWorkConcrete;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFreamework;
 using DataAccessLayer.UnitOfWork;
+using DTOLayer.DTOs.AnnoucmenetDTOs;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BusinessLayer.Container
@@ -40,6 +43,12 @@ namespace BusinessLayer.Container
             services.AddScoped<IAccountDal, EfAccountDal>();
 
             services.AddScoped<IUnitOfWorkDal, UnitOfWorkDal>();
+
+                    
+        }
+        public static void CustomerValidator(this IServiceCollection services)
+        {
+            services.AddTransient<IValidator<AnnoucementAddDTOs>, AnnoucementValidator>();
         }
     }
 }

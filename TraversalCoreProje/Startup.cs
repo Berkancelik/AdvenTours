@@ -1,11 +1,7 @@
 using BusinessLayer.Container;
-using BusinessLayer.ValidationRules;
 using DataAccessLayer.Concrete;
-using DTOLayer.DTOs.AnnoucmenetDTOs;
 using EntityLayer.Concrete;
-using FluentValidation;
 using FluentValidation.AspNetCore;
-using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -17,7 +13,6 @@ using Microsoft.Extensions.Logging;
 using System.IO;
 using TraversalCoreProje.CQRS.Handlers.DestinationHandlers;
 using TraversalCoreProje.Models;
-using AutoMapper;
 
 namespace TraversalCoreProje
 {
@@ -33,18 +28,12 @@ namespace TraversalCoreProje
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddScoped<GetAllDestinationQueryHandler>();
             services.AddScoped<GetDestinationByIdQueryHandler>();
             services.AddScoped<CreateDestinationCommandHandler>();
             services.AddScoped<RemoveDestinationCommandHandler>();
             services.AddScoped<UpdateDestinationCommandHandler>();
 
-            services.AddMediatR(typeof(Startup));
-
-            services.AddAutoMapper(typeof(Startup));
-            services.AddTransient<IValidator<AnnoucementAddDTOs>, AnnoucementValidator>();
-            services.AddHttpClient();
             services.AddLogging(x =>
             {
                 x.ClearProviders();
@@ -52,23 +41,18 @@ namespace TraversalCoreProje
                 x.AddDebug();
             });
 
+            services.AddDbContext<Context>();
+            services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>().AddEntityFrameworkStores<Context>();
 
-            services.
-                AddDbContext<Context>();
-            services
-                .AddIdentity<AppUser, AppRole>()
-                .AddEntityFrameworkStores<Context>()
-                .AddErrorDescriber<CustomIdentityValidator>()
-                .AddEntityFrameworkStores<Context>();
+            services.AddHttpClient();
 
+            services.ContainerDependencies();
 
-            services.
-                ContainerDependencies();
+            services.AddAutoMapper(typeof(Startup));
+              
+            services.CustomerValidator();
 
-
-
-            services
-                .AddControllersWithViews().AddFluentValidation();
+            services.AddControllersWithViews().AddFluentValidation();
 
             services.AddMvc(config =>
             {
@@ -77,11 +61,13 @@ namespace TraversalCoreProje
                 .Build();
                 config.Filters.Add(new AuthorizeFilter(policy));
             });
+
+            services.AddMvc();
         }
 
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
-
             var path = Directory.GetCurrentDirectory();
             loggerFactory.AddFile($"{path}\\Logs\\Log1.txt");
 
@@ -92,13 +78,17 @@ namespace TraversalCoreProje
             else
             {
                 app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseStatusCodePagesWithReExecute("/ErrorPage/Error404", "?code={0}");
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseStatusCodePagesWithReExecute("/ErrorPAge/Error404", "?code={0}");
-            app.UseRouting();
             app.UseAuthentication();
+            app.UseRouting();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -116,7 +106,6 @@ namespace TraversalCoreProje
                 );
             });
 
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -124,8 +113,6 @@ namespace TraversalCoreProje
                   pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
                 );
             });
-
-
         }
     }
 }
