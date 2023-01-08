@@ -17,6 +17,7 @@ using Microsoft.Extensions.Logging;
 using System.IO;
 using TraversalCoreProje.CQRS.Handlers.DestinationHandlers;
 using TraversalCoreProje.Models;
+using AutoMapper;
 
 namespace TraversalCoreProje
 {
@@ -41,7 +42,7 @@ namespace TraversalCoreProje
 
             services.AddMediatR(typeof(Startup));
 
-            //services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapper(typeof(Startup));
             services.AddTransient<IValidator<AnnoucementAddDTOs>, AnnoucementValidator>();
             services.AddHttpClient();
             services.AddLogging(x =>

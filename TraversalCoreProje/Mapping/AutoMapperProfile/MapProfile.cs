@@ -1,10 +1,11 @@
-﻿using DTOLayer.DTOs.AnnoucmenetDTOs;
+﻿using AutoMapper;
+using DTOLayer.DTOs.AnnoucmenetDTOs;
 using DTOLayer.DTOs.AppUserDTOs;
 using EntityLayer.Concrete;
 
 namespace TraversalCoreProje.Mapping.AutoMapperProfile
 {
-    public class MapProfile : AutoMapper.Profile
+    public class MapProfile : Profile
     {
         public MapProfile()
         {
