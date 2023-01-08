@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using TraversalCoreProje.CQRS.Results.DestinationResults;
 
-namespace TraversalCoreProje.CQRS.Handlers
+namespace TraversalCoreProje.CQRS.Handlers.DestinationHandlers
 {
     public class GetAllDestinationQueryHandler
     {

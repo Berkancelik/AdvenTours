@@ -1,7 +1,7 @@
 ﻿using DataAccessLayer.Concrete;
 using TraversalCoreProje.CQRS.Commands.DestinationCommands;
 
-namespace TraversalCoreProje.CQRS.Handlers
+namespace TraversalCoreProje.CQRS.Handlers.DestinationHandlers
 {
     public class RemoveDestinationCommandHandler
     {

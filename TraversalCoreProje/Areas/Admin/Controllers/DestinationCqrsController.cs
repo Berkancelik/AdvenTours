@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TraversalCoreProje.CQRS.Commands.DestinationCommands;
-using TraversalCoreProje.CQRS.Handlers;
+using TraversalCoreProje.CQRS.Handlers.DestinationHandlers;
 using TraversalCoreProje.CQRS.Results.DestinationResults;
 
 namespace TraversalCoreProje.Areas.Admin.Controllers

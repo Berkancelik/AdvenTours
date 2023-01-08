@@ -1,6 +1,10 @@
-﻿namespace TraversalCoreProje.CQRS.Queries.GuiedeQueries
+﻿using MediatR;
+using System.Collections.Generic;
+using TraversalCoreProje.CQRS.Results.GuideResult;
+
+namespace TraversalCoreProje.CQRS.Queries.GuiedeQueries
 {
-    public class GetAllGuideQuery
+    public class GetAllGuideQuery:IRequest<List<GetAllGuideQueryResult>>
     {
     }
 }

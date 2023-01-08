@@ -2,7 +2,7 @@
 using EntityLayer.Concrete;
 using TraversalCoreProje.CQRS.Commands.DestinationCommands;
 
-namespace TraversalCoreProje.CQRS.Handlers
+namespace TraversalCoreProje.CQRS.Handlers.DestinationHandlers
 {
     public class CreateDestinationCommandHandler
     {
@@ -24,7 +24,7 @@ namespace TraversalCoreProje.CQRS.Handlers
                 Status = true
             });
             _context.SaveChanges();
-              
+
         }
 
     }
