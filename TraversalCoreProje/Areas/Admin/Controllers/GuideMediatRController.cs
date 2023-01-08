@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using TraversalCoreProje.CQRS.Commands.GuideCommands;
 using TraversalCoreProje.CQRS.Queries.GuiedeQueries;
 
 namespace TraversalCoreProje.Areas.Admin.Controllers
@@ -28,6 +29,18 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
         {
             var values = await _mediator.Send(new GetGuideByIdQuery(id));
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult AddGuide()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddGuide(CreateGuideCommand command)
+        {
+            await _mediator.Send(command);
+            return RedirectToAction("Index");
         }
     }
 }
