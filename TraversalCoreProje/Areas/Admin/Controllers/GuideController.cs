@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace TraversalCoreProje.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Route("Admin/Guide]")]
+    [Route("Admin/Guide")]
     [AllowAnonymous]
     public class GuideController : Controller
     {

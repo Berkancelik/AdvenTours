@@ -11,12 +11,12 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
     public class DestinationCqrsController : Controller
     {
         private readonly GetAllDestinationQueryHandler _getAllDestinationQueryHandler;
-        private readonly GetDestinationByIdQueryHandler _getDestinationByIdQueryHandler;
+        private readonly GetDestinationByIDQueryHandler _getDestinationByIdQueryHandler;
         private readonly CreateDestinationCommandHandler _createDestinationCommandHandler;
         private readonly RemoveDestinationCommandHandler _removeDestinationCommandHandler;
         private readonly UpdateDestinationCommandHandler _updateDestinationCommandHandler;
 
-        public DestinationCqrsController(GetAllDestinationQueryHandler getAllDestinationQueryHandler, GetDestinationByIdQueryHandler getDestinationByIdQueryHandler, CreateDestinationCommandHandler createDestinationCommandHandler, RemoveDestinationCommand removeDestinationCommand, RemoveDestinationCommandHandler removeDestinationCommandHandler, UpdateDestinationCommandHandler updateDestinationCommandHandler)
+        public DestinationCqrsController(GetAllDestinationQueryHandler getAllDestinationQueryHandler, GetDestinationByIDQueryHandler getDestinationByIdQueryHandler, CreateDestinationCommandHandler createDestinationCommandHandler, RemoveDestinationCommand removeDestinationCommand, RemoveDestinationCommandHandler removeDestinationCommandHandler, UpdateDestinationCommandHandler updateDestinationCommandHandler)
         {
             _getAllDestinationQueryHandler = getAllDestinationQueryHandler;
             _getDestinationByIdQueryHandler = getDestinationByIdQueryHandler;

@@ -4,11 +4,11 @@ using TraversalCoreProje.CQRS.Results.DestinationResults;
 
 namespace TraversalCoreProje.CQRS.Handlers.DestinationHandlers
 {
-    public class GetDestinationByIdQueryHandler
+    public class GetDestinationByIDQueryHandler
     {
         private readonly Context _context;
 
-        public GetDestinationByIdQueryHandler(Context context)
+        public GetDestinationByIDQueryHandler(Context context)
         {
             _context = context;
         }
