@@ -25,7 +25,7 @@ namespace TraversalCoreProje.CQRS.Handlers.GuideHandlers
             {
                 GuideID = x.GuideID,
                 Description = x.Description,
-                Image = x.Image,    
+                Image = x.Image,
                 Name = x.Name,
 
             }).AsNoTracking().ToListAsync();

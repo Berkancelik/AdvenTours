@@ -2,7 +2,7 @@
 
 namespace TraversalCoreProje.CQRS.Commands.GuideCommands
 {
-    public class CreateGuideCommand:IRequest
+    public class CreateGuideCommand : IRequest
     {
 
         public string Name { get; set; }

@@ -44,7 +44,7 @@ namespace BusinessLayer.Container
 
             services.AddScoped<IUnitOfWorkDal, UnitOfWorkDal>();
 
-                    
+
         }
         public static void CustomerValidator(this IServiceCollection services)
         {

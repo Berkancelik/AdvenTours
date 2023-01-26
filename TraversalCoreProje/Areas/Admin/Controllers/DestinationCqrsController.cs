@@ -30,7 +30,7 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
             var values = _getAllDestinationQueryHandler.Handle();
             return View(values);
         }
-        [HttpGet] 
+        [HttpGet]
         public IActionResult GetDestination(int id)
         {
             var values = _getDestinationByIdQueryHandler.Handle(new GetDestinationByIdQuery(id));
@@ -58,7 +58,8 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
         }
 
         [HttpDelete]
-        public IActionResult DeleteDestination(int id) { 
+        public IActionResult DeleteDestination(int id)
+        {
             _removeDestinationCommandHandler.Handle(new RemoveDestinationCommand(id));
             return RedirectToAction("Index");
         }
