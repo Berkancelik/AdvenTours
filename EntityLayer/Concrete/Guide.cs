@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EntityLayer.Concrete
 {
@@ -20,5 +21,6 @@ namespace EntityLayer.Concrete
         public string InstagramUrl { get; set; }
 
         public bool Status { get; set; }
-    }
+        public List<Destination> Destinations { get; set; }
+     }
 }
