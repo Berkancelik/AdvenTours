@@ -1,11 +1,11 @@
 ﻿using BusinessLayer.Abstract;
 using EntityLayer.Concrete;
-
+using System.Collections.Generic;
 
 namespace DataAccessLayer.Concrete
 {
     public interface IDestinationService : IGenericService<Destination>
     {
-        void TAdd(Destination destination);
+        public List<Destination> TGetDestiationWithGuide(int id);
     }
 }

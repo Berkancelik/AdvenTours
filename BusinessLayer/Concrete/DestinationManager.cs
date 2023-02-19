@@ -15,6 +15,11 @@ namespace BusinessLayer.Concrete
             _destinationDal = destinationDal;
         }
 
+        public List<Destination> TGetDestiationWithGuide(int id)
+        {
+            return _destinationDal.GetDestiationWithGuide(id);
+        }
+
         public void TAdd(Destination t)
         {
             _destinationDal.Insert(t);
