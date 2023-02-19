@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using TraversalCoreProje.Areas.Member.Models;
 
@@ -19,7 +21,8 @@ namespace TraversalCoreProje.Areas.Member.Controllers
             _userManager = userManager;
         }
 
-        public async System.Threading.Tasks.Task<IActionResult> Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
             var values = await _userManager.FindByNameAsync(User.Identity.Name);
             UserEditViewModel userEditViewModel = new UserEditViewModel();
@@ -38,13 +41,12 @@ namespace TraversalCoreProje.Areas.Member.Controllers
             {
                 var resource = Directory.GetCurrentDirectory();
                 var extension = Path.GetExtension(p.Image.FileName);
-                var imageName = Guid.NewGuid() + extension;
-                var savelocation = resource + "/wwwroot/userimages/" + imageName;
+                var imagename = Guid.NewGuid() + extension;
+                var savelocation = resource + "/wwwroot/userimages/" + imagename;
                 var stream = new FileStream(savelocation, FileMode.Create);
                 await p.Image.CopyToAsync(stream);
-                user.ImageUrl = imageName;
+                user.ImageUrl = imagename;
             }
-
             user.Name = p.Name;
             user.Surname = p.Surname;
             user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, p.Password);
