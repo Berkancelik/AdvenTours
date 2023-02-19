@@ -21,7 +21,7 @@ namespace TraversalCoreProje.Controllers
         [HttpGet]
         public PartialViewResult AddComment()
         {
-            //ViewBag.CommentId = id;
+            //ViewBag.Id = id;
             //var value =  _userManager.FindByNameAsync(User.Identity.Name);
             //ViewBag.userId = value.Id;
 

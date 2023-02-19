@@ -8,8 +8,7 @@ namespace EntityLayer.Concrete
     public class Destination
     {
 
-        [Key]
-        public int DestinationID { get; set; }
+        public int Id { get; set; }
 
         public string City { get; set; }
 

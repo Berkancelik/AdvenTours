@@ -49,7 +49,7 @@ namespace TraversalCoreProje.Areas.Member.Controllers
                                            select new SelectListItem
                                            {
                                                Text = x.City,
-                                               Value = x.DestinationID.ToString()
+                                               Value = x.Id.ToString()
                                            }).ToList();
             ViewBag.v = values;
             return View();

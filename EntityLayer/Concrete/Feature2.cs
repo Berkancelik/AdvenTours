@@ -6,10 +6,8 @@ namespace EntityLayer.Concrete
    
     public class Feature2
     {
-        /// <summary>
-  
-        [Key]
-        public int Feature2Id { get; set; }
+   
+        public int Id { get; set; }
  
         public string Title { get; set; }
      

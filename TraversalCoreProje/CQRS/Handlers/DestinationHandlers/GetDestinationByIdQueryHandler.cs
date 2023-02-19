@@ -17,7 +17,7 @@ namespace TraversalCoreProje.CQRS.Handlers.DestinationHandlers
             var values = _context.Destinations.Find(query.Id);
             return new GetDestinationByIdQueryResult
             {
-                Id = values.DestinationID,
+                Id = values.Id,
                 City = values.City,
                 DayNight = values.DayNight,
                 Price = values.Price

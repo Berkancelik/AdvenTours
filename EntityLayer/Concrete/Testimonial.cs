@@ -7,8 +7,8 @@ namespace EntityLayer.Concrete
 
     public class Testimonial
     {
-        [Key]
-        public int TestimonialID { get; set; }
+        
+        public int Id { get; set; }
      
         public string Client { get; set; }
     

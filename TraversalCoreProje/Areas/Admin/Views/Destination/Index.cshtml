@@ -19,13 +19,13 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.DestinationID</td>
+            <td>@item.Id</td>
             <td>@item.City</td>
             <td>@item.Price</td>
             <td>@item.Capacity</td>
-            <td><a href="/Admin/Destination/DestinationDetails/@item.DestinationID" class="btn btn-outline-info">Sitede Gör</a></td>
-            <td><a href="/Admin/Destination/DeleteDestination/@item.DestinationID" class="btn btn-outline-danger">Sil</a></td>
-            <td><a href="/Admin/Destination/UpdateDestination/@item.DestinationID" class="btn btn-outline-success">Güncelle</a></td>
+            <td><a href="/Admin/Destination/DestinationDetails/@item.Id" class="btn btn-outline-info">Sitede Gör</a></td>
+            <td><a href="/Admin/Destination/DeleteDestination/@item.Id" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Admin/Destination/UpdateDestination/@item.Id" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>

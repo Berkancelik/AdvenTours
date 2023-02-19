@@ -21,7 +21,7 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.About", b =>
                 {
-                    b.Property<int>("AboutID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -44,14 +44,14 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Title2")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("AboutID");
+                    b.HasKey("Id");
 
                     b.ToTable("Abouts");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.About2", b =>
                 {
-                    b.Property<int>("About2ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -68,7 +68,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Title2")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("About2ID");
+                    b.HasKey("Id");
 
                     b.ToTable("About2s");
                 });
@@ -222,7 +222,7 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.Comment", b =>
                 {
-                    b.Property<int>("CommentId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -242,7 +242,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<int>("DestinationId")
                         .HasColumnType("int");
 
-                    b.HasKey("CommentId");
+                    b.HasKey("Id");
 
                     b.HasIndex("DestinationId");
 
@@ -251,7 +251,7 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.Contact", b =>
                 {
-                    b.Property<int>("ContactID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -274,14 +274,14 @@ namespace DataAccessLayer.Migrations
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
-                    b.HasKey("ContactID");
+                    b.HasKey("Id");
 
                     b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.ContactUS", b =>
                 {
-                    b.Property<int>("ContactUsID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -304,14 +304,14 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Subject")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ContactUsID");
+                    b.HasKey("Id");
 
                     b.ToTable("ContactUses");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Destination", b =>
                 {
-                    b.Property<int>("DestinationID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -352,7 +352,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
-                    b.HasKey("DestinationID");
+                    b.HasKey("Id");
 
                     b.HasIndex("GuideId");
 
@@ -361,7 +361,7 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.Feature", b =>
                 {
-                    b.Property<int>("FeatureID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -378,14 +378,14 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("FeatureID");
+                    b.HasKey("Id");
 
                     b.ToTable("Features");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Feature2", b =>
                 {
-                    b.Property<int>("Feature2Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -402,14 +402,14 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Feature2Id");
+                    b.HasKey("Id");
 
                     b.ToTable("Feature2s");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Guide", b =>
                 {
-                    b.Property<int>("GuideID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -438,14 +438,14 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("TwitterUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("GuideID");
+                    b.HasKey("Id");
 
                     b.ToTable("Guides");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Newsletter", b =>
                 {
-                    b.Property<int>("NewsletterID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -453,14 +453,14 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Mail")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("NewsletterID");
+                    b.HasKey("Id");
 
                     b.ToTable("Newsletters");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Reservation", b =>
                 {
-                    b.Property<int>("ReservationID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -483,7 +483,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ReservationID");
+                    b.HasKey("Id");
 
                     b.HasIndex("AppUserId");
 
@@ -494,7 +494,7 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.SubAbout", b =>
                 {
-                    b.Property<int>("SubAboutId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -505,14 +505,14 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("SubAboutId");
+                    b.HasKey("Id");
 
                     b.ToTable("SubAbouts");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Testimonial", b =>
                 {
-                    b.Property<int>("TestimonialID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -529,7 +529,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
-                    b.HasKey("TestimonialID");
+                    b.HasKey("Id");
 
                     b.ToTable("Testimonials");
                 });

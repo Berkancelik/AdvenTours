@@ -6,7 +6,7 @@ namespace EntityLayer.Concrete
     public class Reservation
     {
      
-        public int ReservationID { get; set; }
+        public int Id { get; set; }
     
         public int AppUserId { get; set; }
   

@@ -20,7 +20,7 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.CommentId</td>
+            <td>@item.Id</td>
             <td>@item.CommentUser</td>
             <td>@item.Destination.City</td>
             <td>@(((DateTime)item.CommentDate).ToString("dd-MMM-yyyy"))</td>

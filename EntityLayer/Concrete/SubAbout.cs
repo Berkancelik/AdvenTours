@@ -7,8 +7,8 @@ namespace EntityLayer.Concrete
 
     public class SubAbout
     {
-        [Key]
-        public int SubAboutId { get; set; }
+        
+        public int Id { get; set; }
 
         public string Title { get; set; }
        
