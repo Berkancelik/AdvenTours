@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Scripts{
+
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(() =>{
+            var connection = new  signalR.HubConnectionBuilder().WithUrl("")
+        })
+
+
+    </script>
+
+
+}

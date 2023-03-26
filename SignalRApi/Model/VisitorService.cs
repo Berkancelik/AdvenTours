@@ -34,7 +34,7 @@ namespace SignalRApi.Model
             List<VisitorChart> visitorCharts = new List<VisitorChart>();
             using (var command = _context.Database.GetDbConnection().CreateCommand())
             {
-                command.CommandText = "query sorgu";
+                command.CommandText = "select * from crosstab\r\n(\r\n'select \"VisitDate\",\"City\", \"CityVisitCount\"\r\n\tFrom \"Visitors\"\r\n\tOrder By 1,2\r\n\t'\r\n) AS ct(\"VisitDate\" date, City1 int, City2 int, City3 int, City4 int, City5 int);\r\n\r\n";
                 command.CommandType = System.Data.CommandType.Text;
                 _context.Database.OpenConnection();
                 using (var reader = command.ExecuteReader())
