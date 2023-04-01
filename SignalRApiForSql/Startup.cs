@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using SignalRApiForSql.DAL;
 using SignalRApiForSql.Hubs;
+using SignalRApiForSql.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,12 +39,17 @@ namespace SignalRApiForSql
             }));
 
 
-            services.AddEntityFrameworkSqlServer().AddDbContext<Context>(opt =>
-            opt.UseSqlServer(Configuration.GetConnectionString("Connection")));
+          
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SignalRApi", Version = "v1" });
+            });
+
+
+            services.AddDbContext<Context>(options =>
+            {
+                options.UseSqlServer(Configuration["Connection"]);
             });
         }
 

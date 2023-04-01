@@ -1,0 +1,41 @@
+{
+  "name": "charts",
+  "port": "3001",
+  "version": "0.0.3",
+  "public": "./public",
+  "seed": "https://github.com/turingou/charts-theme-sparkline.git",
+  "description": "a chart generator service for easy embed collections of charts in emails",
+  "main": "index.js",
+  "bin": "./bin/cli",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "MD5": "1.2.0",
+    "exeq": "0.4.0",
+    "theme": "latest",
+    "phantom": "~0.5.4",
+    "express-scaffold": "~0.2.2",
+    "charts-theme-chartjs": "latest",
+    "charts-theme-sparkline": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/turingou/charts.git"
+  },
+  "keywords": [
+    "chart",
+    "charts",
+    "canvas",
+    "html5",
+    "chart-api",
+    "email",
+    "email-chart"
+  ],
+  "author": "turing <o.u.turing@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turingou/charts/issues"
+  },
+  "homepage": "https://github.com/turingou/charts"
+}

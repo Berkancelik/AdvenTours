@@ -9,6 +9,7 @@ namespace SignalRApiForSql.DAL
         Ardahan = 2,
         Kars = 3,
         Diyarbakır = 4,
+        Samsun = 5
     }
 
     public class Visitor
