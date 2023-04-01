@@ -55,10 +55,11 @@ namespace SignalRApi
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SignalRApi v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SignalRApiForSql v1"));
             }
 
             app.UseRouting();
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 
