@@ -15,21 +15,14 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
             _reservationService = reservationService;
         }
 
-        /// <summary>
-        ///  The method in which index values ​​are checked
-        /// </summary>
-        /// <returns></returns>
+       
         public IActionResult Index()
         {
             var values = _appUserService.TGetList();
             return View();
         }
 
-        /// <summary>
-        /// The method in which DeleteUser values ​​are checked
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+       
         public IActionResult DeleteUser(int id)
         {
             var values = _appUserService.TGetByID(id);
@@ -37,11 +30,7 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
-        /// <summary>
-        /// The method in which EditUser values ​​are checked {GET}
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+      
         [HttpGet]
         public IActionResult EditUser(int id)
         {
@@ -50,11 +39,7 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
 
         }
 
-        /// <summary>
-        /// The method in which EditUser values ​​are checked{POST}
-        /// </summary>
-        /// <param name="appUser"></param>
-        /// <returns></returns>
+      
         [HttpPost]
         public IActionResult EditUser(AppUser appUser)
         {
@@ -62,22 +47,13 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
-        /// <summary>
-        /// The method in which CommentUser values ​​are checked
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         public IActionResult CommentUser(int id)
         {
             _appUserService.TGetList();
             return View();
         }
 
-        /// <summary>
-        /// The method in which ReservationUser values ​​are checked
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+       
         public IActionResult ReservationUser(int id)
         {
             var values = _reservationService.GetListWithReservaitonByAccepted(id);

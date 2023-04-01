@@ -1,4 +1,4 @@
-namespace TraversalCoreProje.Models
+namespace AdvenTours.Models
 {
     public class ErrorViewModel
     {

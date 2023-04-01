@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AdvenTours.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Diagnostics;
 using TraversalCoreProje.Models;
 
-namespace TraversalCoreProje.Controllers
+namespace AdvenTours.Controllers
 {
     public class HomeController : Controller
     {
