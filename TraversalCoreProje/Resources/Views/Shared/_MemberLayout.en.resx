@@ -124,16 +124,16 @@
     <value>Dashboard</value>
   </data>
   <data name="Geçmiş Rezv." xml:space="preserve">
-    <value>Past Rev.</value>
+    <value>Past Reserve.</value>
   </data>
   <data name="Onay Bekleyen Rezv." xml:space="preserve">
-    <value>Pending Approval Rezv.</value>
+    <value>Reserve Pending Approval.</value>
   </data>
   <data name="Profilim" xml:space="preserve">
-    <value>My profile</value>
+    <value>My Profile</value>
   </data>
   <data name="Siteye Git" xml:space="preserve">
-    <value>Go to the site</value>
+    <value>Go To The Site</value>
   </data>
   <data name="Son Rotalar" xml:space="preserve">
     <value>Last Routes</value>

@@ -121,13 +121,13 @@
     <value>Réserve Active.</value>
   </data>
   <data name="Dashboard" xml:space="preserve">
-    <value>Tableau de bord</value>
+    <value>Tableau De Bord</value>
   </data>
   <data name="Geçmiş Rezv." xml:space="preserve">
-    <value>Past Rev.</value>
+    <value>Réserve Passée.</value>
   </data>
   <data name="Onay Bekleyen Rezv." xml:space="preserve">
-    <value>En Attente d'approbation Rezv.</value>
+    <value>Réserve En Attente D'approbation.</value>
   </data>
   <data name="Profilim" xml:space="preserve">
     <value>Mon Profil</value>
