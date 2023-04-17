@@ -106,7 +106,7 @@ namespace TraversalCoreProje
 
             app.UseAuthorization();
 
-            var supportedCultures = new[] { "en", "tr", "fr", "es" };
+            var supportedCultures = new[] { "en", "tr", "fr"};
             var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[1]).AddSupportedCultures(supportedCultures).AddSupportedCultures(supportedCultures);  
             app.UseRequestLocalization(localizationOptions);
 

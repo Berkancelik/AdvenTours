@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="merhaba" xml:space="preserve">
-    <value>hello</value>
+  <data name="Profil ile ilgili bilgilerinizi bu sayfadan güncelleyebilirsiniz" xml:space="preserve">
+    <value>Profil ile ilgili bilgilerinizi bu sayfadan güncelleyebilirsiniz</value>
   </data>
 </root>

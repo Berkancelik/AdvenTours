@@ -1813,7 +1813,6 @@
 
 	<ItemGroup>
 	  <Folder Include="Areas\Member\Data\" />
-	  <Folder Include="Resources\" />
 	  <Folder Include="wwwroot\Logs\" />
 	  <Folder Include="wwwroot\PdfReports\" />
 	  <Folder Include="wwwroot\userimages\" />
