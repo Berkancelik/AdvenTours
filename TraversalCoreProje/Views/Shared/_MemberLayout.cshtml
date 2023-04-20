@@ -1,10 +1,14 @@
 ﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @{
     Layout = null;
+        string media = "(max-width: 767.98px)";
+
 }
 
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
+
+
 @await Component.InvokeAsync("_MemberLayoutHead")
 <body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-purple-blue" data-col="2-columns">
     <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light">
@@ -21,8 +25,28 @@
         </div>
     </nav>
 
-    @*@await Component.InvokeAsync("_MemberLayoutSidebar")*@
+        <style>
+    .main-menu {
+        width: auto;
+        overflow: hidden;
+    }
 
+    .navigation-main {
+        white-space: nowrap;
+    }
+
+    @media (max-width: 767.98px) {
+        .main-menu {
+            width: 240px;
+            overflow: auto;
+        }
+        .navigation-main {
+            white-space: normal;
+        }
+    }
+</style>
+
+ 
     <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true" data-img="~/member/theme-assets/images/backgrounds/02.jpg">
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
