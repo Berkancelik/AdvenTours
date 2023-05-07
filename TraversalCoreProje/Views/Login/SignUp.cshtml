@@ -8,7 +8,7 @@
 <html lang="zxx">
 
 <head>
-    <title>Invent Signup Form Responsive Widget Template | Home :: W3layouts</title>
+    <title>Test Başlık</title>
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
@@ -36,11 +36,11 @@
                 <div class="form-right">
                     <div class="overlay">
                         <div class="grid-info-form">
-                            <h5>Traversal Rezervasyon</h5>
-                            <h3>Hesap Oluşturun</h3>
+                            <h5>@localizer["Adven Tours Rezervasyon"]</h5>
+                            <h3>@localizer["Hesap Oluşturun"]</h3>
                             <p>
-                                Biririnden deenyimli rehberlerimziz eşliğinde İskandinav ülkelerinin sğuğunu, Akdeniz ülkelerinin sıcaklığından
-                                Ardahan dağlarına tırmanman için kayıt olun.
+                                @localizer["Biririnden deneyimli rehberlerimziz eşliğinde İskandinav ülkelerinin soğuğunu, Akdeniz ülkelerinin sıcaklığındanArdahan dağlarına tırmanman için kayıt olun."]
+                              
                             </p>
                             <a href="index.html" class="read-more-1 btn">Hadi Başlayalım</a>
                         </div>
@@ -49,55 +49,55 @@
                 </div>
                 <div class="form-left">
                     <div class="middle">
-                        <h4>Bize Katılın</h4>
-                        <p>Hemen ücretsiz hesap oluşturun.</p>
+                        <h4>@localizer["Bize Katılın"]</h4>
+                        <p>@localizer["Hemen ücretsiz hesap oluşturun."]</p>
                     </div>
         <form asp-action="SignUp"  class="signin-form">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
               <div class="form-input">
-                <label asp-for="Name" class="control-label">Adınız</label>
+                            <label asp-for="Name" class="control-label">@localizer["Adınız"]</label>
                 <input asp-for="Name" class="form-input"  />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
               <div class="form-input">
-                <label asp-for="Surname" class="control-label">Soyadınız</label>
+                            <label asp-for="Surname" class="control-label">@localizer["Soyadınız"]</label>
                 <input asp-for="Surname" class="form-input" />
                 <span asp-validation-for="Surname" class="text-danger"></span>
             </div>
             <div class="form-input">
-                <label asp-for="UserName" class="control-label">Kullanıcı Adınız</label>
+                            <label asp-for="UserName" class="control-label">@localizer["Kullanıcı Adınız"]</label>
                 <input asp-for="UserName" class="form-input" />
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
             <div class="form-input">
-                <label asp-for="Mail" class="control-label">Mail Adresiniz</label>
+                            <label asp-for="Mail" class="control-label">@localizer["Mail Adresiniz"]</label>
                 <input asp-for="Mail" type="email"  class="form-input" />
                 <span asp-validation-for="Mail"  class="text-danger"></span>
             </div>
          
             <div class="form-input">
-                <label asp-for="Password" class="control-label">Parola</label>
+                            <label asp-for="Password" class="control-label">@localizer["Parola"]</label>
                 <input asp-for="Password" type="password" class="form-input" />
                 <span asp-validation-for="Password" type="password"  class="text-danger"></span>
             </div>
 
               <div class="form-input">
-                <label asp-for="ConfirmPassword" class="control-label">Parola Tekrar</label>
+                            <label asp-for="ConfirmPassword" class="control-label">@localizer["Parola Tekrar"]</label>
                 <input asp-for="ConfirmPassword" type="password" class="form-input" />
                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                  </div>
 
                         <label class="container">
-                            Şartları Okudum Kabul Ediyorum
+                            @localizer["Şartları Okudum Kabul Ediyorum"]
+                         
                             <input type="checkbox">
                             <span class="checkmark"></span>
                         </label>
-                        <button class="btn">Kayıt Ol</button>
+                        <button class="btn">@localizer["Kayıt Ol"]</button>
                     </form>
                     <div class="copy-right text-center">
                         <p>
-                            © @DateTime.Now.Year Tüm Hakları Saklıdır | Design by
-                            <a href="http://w3layouts.com/" target="_blank">W3layouts</a>
+                            © @DateTime.Now.Year Tüm Hakları Saklıdır |</a>
                         </p>
                     </div>
                 </div>
@@ -106,7 +106,6 @@
 
         </div>
     </section>
-    <!-- //login-section -->
-</body>
+ </body>
 
 </html>
