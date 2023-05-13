@@ -2,22 +2,23 @@
 {
 
 <div class="leave-comment-form mt-5" id="reply">
-    <h4 class="side-title mb-2">Bir yorum bırakın</h4>
+        <h4 class="side-title mb-2">
+            @localizer["Bir yorum bırakın"]</h4>
     <p class="mb-4">
-        İşaretli alanları doldurmanız gerekmektedir.
-    </p>
+                @localizer[""]
+        </p>
     <form method="post" asp-action="AddComment" asp-controller="Comment">
         <input type="hidden" name="DestinationId" value="@ViewBag.destId" />
         <input type="hidden" name="AppUserId" value="@ViewBag.userId" />
         <h2>Kullanıcı ID:@ViewBag.userId</h2>
         <div class="form-group">
-            <textarea name="CommentContent" class="form-control" placeholder="Yorumunuz*" required=""
+                <textarea name="CommentContent" class="form-control" placeholder="@localizer["Yorumunuz*"]" required=""
                       spellcheck="false"></textarea>
         </div>
        
 
         <div class="submit text-right">
-            <button class="btn btn-style btn-primary">Yorum Yap </button>
+                <button class="btn btn-style btn-primary">@localizer["Yorum Yap"] </button>
         </div>
     </form>
 </div>
@@ -26,5 +27,5 @@
 
 }
 else{
-    <h2>Yorum yapabilmek için üye olmanız gerekmektedir.</h2>
+    <h2>@localizer["Yorum yapabilmek için üye olmanız gerekmektedir."]</h2>
 }
