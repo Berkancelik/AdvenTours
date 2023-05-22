@@ -117,37 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Adınız*" xml:space="preserve">
-    <value>Your name*</value>
+  <data name="Aktif Rezervasyonlarım" xml:space="preserve">
+    <value>Aktif Rezervasyonlarım</value>
   </data>
-  <data name="Bize Ulaşın" xml:space="preserve">
-    <value>Contact us</value>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
   </data>
-  <data name="Bu alana mesajınızı yazabilirsiniz*" xml:space="preserve">
-    <value>You can write your message in this field*</value>
+  <data name="Duyurular" xml:space="preserve">
+    <value>Duyurular</value>
   </data>
-  <data name="Harita" xml:space="preserve">
-    <value>Map</value>
+  <data name="Geçmiş Rezervasyonları" xml:space="preserve">
+    <value>Geçmiş Rezervasyonları</value>
   </data>
-  <data name="Mail Adresimiz:" xml:space="preserve">
-    <value>Our Email Address:</value>
+  <data name="Onay Bekleyenler" xml:space="preserve">
+    <value>Onay Bekleyenler</value>
   </data>
-  <data name="Mail Adresiniz*" xml:space="preserve">
-    <value>Your Email*</value>
+  <data name="Profilim" xml:space="preserve">
+    <value>Profilim</value>
   </data>
-  <data name="Merhaba sevgili gezgin, bize 7 gün 24 saat whatsapp, mail, mesaj gibi iletişim ağlarımız üzerinden ulaşabilirsin." xml:space="preserve">
-    <value>Hello dear traveler, you can reach us 24 hours a day, 7 days a week through our communication networks such as whatsapp, mail, message.</value>
+  <data name="Rotalar" xml:space="preserve">
+    <value>Rotalar</value>
   </data>
-  <data name="Mesajı Gönder" xml:space="preserve">
-    <value>Send Message</value>
-  </data>
-  <data name="Ofisimize Gelin:" xml:space="preserve">
-    <value>Come to our office:</value>
-  </data>
-  <data name="Sancaktepe/ İstanbul No:23 Haki Mahallesi Güzel Sokak." xml:space="preserve">
-    <value>Sancaktepe/ Istanbul No:23 Haki Mahallesi Güzel Sokak.</value>
-  </data>
-  <data name="İletişim Sayfası" xml:space="preserve">
-    <value>Contact Page</value>
+  <data name="Çıkış Yap" xml:space="preserve">
+    <value>Çıkış Yap</value>
   </data>
 </root>
